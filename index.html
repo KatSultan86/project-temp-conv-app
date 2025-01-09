@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/yollo-logo.svg" />
@@ -8,7 +8,59 @@
     <title>Converter App</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root" class="container py-5 position-relative">
+      <h1 class="text-center mb-4">Temperature Converter</h1>
+
+      <!-- Theme Switcher -->
+      <div id="switcher" class="position-absolute top-0 end-0">
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckDefault"
+          />
+          <label class="form-check-label" for="flexSwitchCheckDefault"
+            >Dark Theme</label
+          >
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form id="converterForm">
+            <!-- Input for numbers -->
+            <div class="mb-3">
+              <label for="tempValue" class="form-label">Value:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="tempValue"
+                placeholder="Enter temperature here:"
+              />
+            </div>
+            <!-- Input for the type of conversion -->
+            <div class="mb-3">
+              <label for="tempType" class="form-label">From:</label>
+              <select id="tempType" class="form-select">
+                <option value="c2f">Celsius to Fahrenheit</option>
+                <option value="f2c">Fahrenheit to Celsius</option>
+              </select>
+            </div>
+            <!-- Button To Submit the Input -->
+            <div class="mt-3">
+              <button type="submit" class="btn btn-primary w-100">
+                Convert
+              </button>
+            </div>
+          </form>
+          <div class="mt-5">
+            <h1 id="result" class="text-center text-success">-40C == -40F</h1>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/themeSwitcher.js"></script>
   </body>
 </html>
