@@ -99,3 +99,6 @@ project-conv-app
 With this template, you’ll learn how to structure your project, implement logic with JavaScript, style with Bootstrap, test with Vitest, and leverage Vite for a modern development workflow. Feel free to customize it for your needs and, most importantly, have fun while learning!
 
 
+-nvm install
+-nvm run dev
+-ctrl+C to stop the app running

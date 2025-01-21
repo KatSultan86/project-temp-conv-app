@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    //the below line can be "start": "vite". In  this case to run  the app run the nvm run test command
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
